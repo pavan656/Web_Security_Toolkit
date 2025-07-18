@@ -15,6 +15,10 @@ function About() {
         <li className="list-group-item">✅ PDF report generation with scan details</li>
         <li className="list-group-item">✅ Secure and clean UI for ease of use</li>
       </ul>
+      <br />
+      <p className="lead text-muted about-description">
+       <b> Note : </b>You may have to Upload the file to VirusTotal Websit in order to fetch the report in their Database.
+      </p>
     </div>
   );
 }

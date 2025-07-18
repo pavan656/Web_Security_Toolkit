@@ -99,22 +99,30 @@ npm start
 It will run on http://localhost:3000
 ```
 
-🌐 API Routes
+### 🌐 API Routes
+
 POST /api/files: Upload file to VirusTotal and return SHA-256 hash
 
 POST /api/hashScan: Trigger Hybrid Analysis scan using SHA-256
 
 GET /api/hashScan: Poll scan result for status/report
 
-📷 Screenshots
+## 📷 Screenshots
 
-File Upload & Scan Result
+### File Upload & Scan Result
+![alt text](<Screenshot 2025-07-18 141047.png>)
 
-Dark Mode Interface
+### Dark Mode Interface
+![alt text](<Screenshot 2025-07-18 141114.png>)
 
-Contact Form Page
+### Contact Form Page
+![alt text](<Screenshot 2025-07-18 141141.png>)
 
-About Page UI
+### About Page UI
+![alt text](<Screenshot 2025-07-18 141709.png>)
+
+### History
+![alt text](<Screenshot 2025-07-18 141743.png>)
 
 📬 Contact
 📧 Email: pavan.s.diwakar@mail.com
