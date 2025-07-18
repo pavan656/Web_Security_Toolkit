@@ -1,6 +1,6 @@
 # 🛡️ Web Security Toolkit
 
-A full-stack web application that allows users to scan files or known hash values for potential threats using the **Hybrid Analysis API**. The toolkit features a user-friendly interface with light/dark mode, real-time scan polling, and hash detection results from multiple vendors.
+A full-stack web application that allows users to scan files or known hash values for potential threats using the **VirusTotal API**. The toolkit features a user-friendly interface with light/dark mode, real-time scan polling, and hash detection results from multiple vendors.
 
 ---
 
@@ -34,7 +34,7 @@ web-security-toolkit/
   Instantly copy SHA-256 hashes for sharing or future scans.
 
 - ⏳ **Real-Time Polling**  
-  Automatically updates the scan result once Hybrid Analysis finishes processing.
+  Automatically updates the scan result once VirusTotal finishes processing.
 
 - 📬 **Contact Form**  
   Built-in contact form powered by FormSubmit.
@@ -56,7 +56,7 @@ web-security-toolkit/
 
 📌 **VirusTotal Usage**:  
 To retrieve the SHA-256 hash of a file, the toolkit sends the file to VirusTotal using a backend route.  
-The file is **not scanned on VirusTotal**, only uploaded to generate the **SHA-256 hash**, which is then used to request the scan report from **Hybrid Analysis**.
+The file is **not scanned on VirusTotal**, only uploaded to generate the **SHA-256 hash**, which is then used to request the scan report from **VirusTotal**.
 
 ---
 
@@ -78,14 +78,15 @@ npm install
 
 Create a .env file in the server/ directory with:
 ```bash
-HYBRID_ANALYSIS_API_KEY=your_hybrid_analysis_api_key
+V_T_API_KEY=your_Virus_Total_api_key
 ```
 
 Then start the backend:
 ```bash
 node server.js
-It will run on http://localhost:5000
 ```
+It will run on http://localhost:5000
+
 
 3. Setup the Frontend
 ```bash
@@ -96,8 +97,9 @@ npm install
 Start the React frontend:
 ```bash
 npm start
-It will run on http://localhost:3000
 ```
+It will run on http://localhost:3000
+
 
 ### 🌐 API Routes
 
