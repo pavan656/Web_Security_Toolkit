@@ -7,9 +7,13 @@ A full-stack web application that allows users to scan files or known hash value
 ## 📁 Folder Structure
 
 web-security-toolkit/
+
 ├── client/ # React frontend
+
 ├── server/ # Express backend
+
 ├── .gitignore
+
 ├── README.md
 
 
@@ -63,26 +67,37 @@ The file is **not scanned on VirusTotal**, only uploaded to generate the **SHA-2
 ```bash
 git clone https://github.com/yourusername/web-security-toolkit.git
 cd web-security-toolkit
+```
 
 2. Setup the Backend
 
+```bash
 cd server
 npm install
+```
 
 Create a .env file in the server/ directory with:
+```bash
 HYBRID_ANALYSIS_API_KEY=your_hybrid_analysis_api_key
+```
 
 Then start the backend:
+```bash
 node server.js
 It will run on http://localhost:5000
+```
 
 3. Setup the Frontend
+```bash
 cd ../client
 npm install
+```
 
 Start the React frontend:
+```bash
 npm start
 It will run on http://localhost:3000
+```
 
 🌐 API Routes
 POST /api/files: Upload file to VirusTotal and return SHA-256 hash
