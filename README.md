@@ -85,7 +85,7 @@ Then start the backend:
 ```bash
 node server.js
 ```
-It will run on http://localhost:5000
+It will run on http://localhost:10000
 
 
 3. Setup the Frontend
@@ -105,9 +105,59 @@ It will run on http://localhost:3000
 
 POST /api/files: Upload file to VirusTotal and return SHA-256 hash
 
-POST /api/hashScan: Trigger Hybrid Analysis scan using SHA-256
+POST /api/hashScan: Trigger VirusTotal scan using SHA-256
 
 GET /api/hashScan: Poll scan result for status/report
+
+---
+
+## 🌐 Live Demo
+
+- **Frontend (Vercel)**: [https://web-security-toolkit-42kpwdcva-pavan656s-projects.vercel.app/](https://web-security-toolkit-42kpwdcva-pavan656s-projects.vercel.app/)
+
+- **Backend (Render)**: [https://web-security-backend.onrender.com](https://web-security-backend.onrender.com)
+
+---
+
+## 🚀 Deployment Instructions
+
+🚀 Deploy to Render
+Go to https://render.com
+
+Click New > Web Service
+
+Connect your GitHub repo
+
+Set:
+
+Build Command: npm install
+
+Start Command: node index.js (or the entry file)
+
+Environment: Node
+
+Environment Variables: add VIRUSTOTAL_API_KEY
+
+Port: 10000 (or your backend port)
+
+🚀 Deploy to Vercel
+Go to https://vercel.com
+
+Create a new project from GitHub repo
+
+Set Environment Variable:
+```bash
+REACT_APP_BACKEND_URL=https://your-backend.onrender.com
+```
+Vercel automatically handles build and deployment for React apps.
+
+📝 Notes
+🧾 File Upload: Files must first be uploaded to VirusTotal, which returns a hash.
+
+🔁 The app polls the API using that hash until the report is ready.
+
+🔐 Do NOT commit your .env file; use secrets in deployment platforms instead.
+
 
 ## 📷 Screenshots
 
