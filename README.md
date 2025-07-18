@@ -121,7 +121,8 @@ GET /api/hashScan: Poll scan result for status/report
 
 ## 🚀 Deployment Instructions
 
-🚀 Deploy to Render
+### 🚀 Deploy Backend to to Render:
+
 Go to https://render.com
 
 Click New > Web Service
@@ -140,7 +141,8 @@ Environment Variables: add VIRUSTOTAL_API_KEY
 
 Port: 10000 (or your backend port)
 
-🚀 Deploy to Vercel
+### 🚀 Deploy Frontend to to Vercel:
+
 Go to https://vercel.com
 
 Create a new project from GitHub repo
@@ -151,7 +153,8 @@ REACT_APP_BACKEND_URL=https://your-backend.onrender.com
 ```
 Vercel automatically handles build and deployment for React apps.
 
-📝 Notes
+### 📝 Notes:
+
 🧾 File Upload: Files must first be uploaded to VirusTotal, which returns a hash.
 
 🔁 The app polls the API using that hash until the report is ready.
