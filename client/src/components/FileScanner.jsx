@@ -27,6 +27,7 @@ function FileScanner() {
     if (!selectedFile) return;
 
     setFile(selectedFile);
+    await handleFileUpload(selectedFile);
     try {
       const arrayBuffer = await selectedFile.arrayBuffer();
       const hashBuffer = await crypto.subtle.digest('SHA-256', arrayBuffer);
@@ -38,6 +39,36 @@ function FileScanner() {
       setError('❌ Failed to compute file hash.');
     }
   };
+  
+  const baseURL = process.env.REACT_APP_BACKEND_URL;
+
+  const handleFileUpload = async () => {
+    if (!file) return;
+    setLoading(true);
+    setError('');
+    setScanResult(null);
+
+    const formData = new FormData();
+    formData.append('file', file);
+
+    try {
+      const response = await axios.post(`${baseURL}/api/files`, formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data'
+        }
+      });
+
+      const { sha256 } = response.data;
+      setComputedHash(sha256); // Optional: update if new hash is returned
+      setHashInput(sha256);    // Pre-fill the hash input
+      // Optionally, you can auto-scan after upload here if desired
+    } catch (err) {
+      setError('❌ Failed to upload file.');
+    } finally {
+      setLoading(false);
+    }
+  };
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
