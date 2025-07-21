@@ -179,8 +179,10 @@ Vercel automatically handles build and deployment for React apps.
 ### History
 ![alt text](<Screenshot 2025-07-18 141743.png>)
 
-📬 Contact
-📧 Email: pavan.s.diwakar@mail.com
+## 🙋‍♂️ Author :
 
+Pavan S Diwakar
+📬 Contact :
+📧 Email: pavan.s.diwakar@mail.com
 💼 LinkedIn: https://linkedin.com/in/pavan-s-diwakar-7b6930315/
 
